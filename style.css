@@ -14,9 +14,9 @@
     top: 0;
     right: 0;
     width: 322px;
-    height: 290px;
+    height: 250px;
     border-radius: 50%;
-    background: linear-gradient( 280deg, #8750f7  0%, rgba(115, 67, 210, 0) 100% );
+    background: linear-gradient( 280deg, #8750f7  10%, rgba(115, 67, 210, 0) 100% );
     filter: blur(150px);
     margin-right: -50px;
     margin-top: -50px;
@@ -106,6 +106,25 @@ li {
 }
 .img-set img:hover{
     border: 2px solid #8750f7;
+}
+.img-set {
+    position: relative;
+    z-index: 1;
+}
+.img-set::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    margin-left: -70px;
+    margin-bottom: -100px;
+    border-radius: 50%;
+    background: linear-gradient( 280deg, #8750f7  20%, rgba(115, 67, 210, 0) 100% );
+    filter: blur(150px);
+
+    z-index: -1;
 }
 .icon-set{
     width: 35px;
