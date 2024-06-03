@@ -1,0 +1,122 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+nav a{
+    text-decoration: none;
+    color: #2a1454;
+    position: relative;
+}
+nav a::before{
+    content: "";
+    left: 0;
+    bottom: 0px;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 4px;
+    background: linear-gradient( 260deg, #8750f7 0%, #2a1454 100% );
+}
+nav a:hover::before{
+    animation-name: a-line;
+    animation-duration: 0.7s;
+}
+@keyframes a-line {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0%;
+        left: 100%;
+    }
+}
+li {
+    list-style: none;
+}
+.custom-btn {
+    padding: 13px 40px ;
+    border: none;
+    color: #fff;
+    border-radius: 30px;
+    background-image: linear-gradient( to right,  #8750f7 0%, #2a1454 100%, #8750f7 100% );
+}
+.primary-color {
+    color: #2a1454;
+}
+.sec-color{
+    color: #8750f7; 
+}
+.gradiant-color{
+    background: linear-gradient( to right, #8750f7 0%, #2a1454 100% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.trans-btn{
+    padding: 15px 45px;
+    border: 1px solid #8750f7;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #8750f7 ;
+}
+.trans-btn:hover{
+    color: #fff;
+    background-color: #8750f7 ;
+    transition: 0.8s;
+}
+.img-set{
+   transform: rotate(4.5deg);
+   border-radius: 14px;
+}
+.img-set:hover{
+    transform: rotate(0deg);
+}
+.img-set img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    
+}
+.img-set img:hover{
+    border: 2px solid #8750f7;
+}
+.icon-set{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #8750f7;
+    position: relative;
+    z-index: 1;
+}
+.icon-set a {
+    color: #8750f7;
+}
+.icon-set:hover a{
+    color: #fff;
+}
+.icon-set:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #8750f7;
+    transform: scale(0);
+    transition: 0.2s;
+    z-index: -1;
+}
+.icon-set:hover::before{
+    transform: scale(1);
+}
