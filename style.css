@@ -2,11 +2,9 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #2a1454;
     font-family: "Bai Jamjuree", sans-serif;
-}
-.hero{
-    position: relative;
-    z-index: 1;
 }
 .hero-nav::before{
     content: "";
@@ -94,22 +92,23 @@ li {
    transform: rotate(4.5deg);
    border-radius: 14px;
 }
-.img-set:hover{
-    transform: rotate(0deg);
-}
 .img-set img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
-    
+    transition: 0.3s;
 }
-.img-set img:hover{
-    border: 2px solid #8750f7;
+.img-set:hover{
+    transform: rotate(0deg);
+    transition: 0.3s;
 }
 .img-set {
     position: relative;
     z-index: 1;
+}
+.img-set img:hover{
+    border: 2px solid #8750f7;
 }
 .img-set::before{
     content: "";
@@ -119,7 +118,7 @@ li {
     height: 200px;
     width: 200px;
     margin-left: -70px;
-    margin-bottom: -100px;
+    margin-bottom: -30px;
     border-radius: 50%;
     background: linear-gradient( 280deg, #8750f7  20%, rgba(115, 67, 210, 0) 100% );
     filter: blur(150px);
@@ -156,4 +155,63 @@ li {
 }
 .icon-set:hover::before{
     transform: scale(1);
+}
+.services-section {
+    margin-top: 85px;
+    background-color: #f6f3fc;
+}
+.services {
+    padding: 100px 0px;
+}
+.services hr {
+    margin: 0;
+}
+.service-header {
+    margin: 0 auto;
+    max-width: 675px;
+    width: 100%;
+}
+.service-header p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.left-box{
+    width: 35%;
+}
+.right-box{
+    width: 42%;
+}
+.right-box p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2a1454;
+}
+.icon-box{
+    width: 22%;
+}
+.custom-arrow {
+    /* font-size: 30px; */
+    color: #8750f7;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (width < 576px) {
+    .custom-btn{
+        padding: 9px 30px;
+    }
+}
+
+@media only screen and (width < 768px) {
+    .nav-menu {
+        position: absolute;
+        left : 0;
+        top: 100%;
+        width: 100%;
+        min-height: 90vh;
+        overflow-y: auto;
+        background-color: #2a1454;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: all 0.4s ease-in-out 0s;
+    }
 }
